@@ -9,54 +9,6 @@
     // border: solid red 1px;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: right;
-    line-height: 50px;
-    // height: 50px;
-
-    background-color: black;
-    color: white;
-
-    position: sticky;
-    top: 0;
-    z-index: 2;
-
-    width: 100%;
-
-
-    .header__nav__ul{
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        margin-right: 10px;
-        margin-bottom: 0;
-    }
-
-    .header__nav__li{
-        line-height: 50px;
-        transition: background-color 0.5s ease-in;
-
-        .header__nav__a{
-            display: block;
-            text-decoration: none;
-            color: white;
-            line-height: 50px;
-            padding: 0 10px;
-        }
-
-        .header__nav__a:hover{
-            transition: color 0.5s ease-in;
-            color: black;
-        }
-    }
-
-    .header__nav__li:hover{
-        background-color: white;
-    }
-}
-
 .main{
 
     section{
@@ -69,12 +21,11 @@
         h2{
             // background-color: red;
             margin-bottom: 0;
+            // padding-top: 40px;
+            margin-top: 40px;
 
             height: 100px;
             line-height: 100px;
-
-            border-top: double black 3px;
-
         }
     }
 
@@ -115,14 +66,15 @@
     }
 
     #presentation{
-        height: 600px;
-        background-color: whitesmoke;
+        height: auto;
+        background-color: white;
+        margin-bottom: 60px;
 
         .presentation_p{
             margin: auto;
             margin-top: 20px;
             margin-bottom: 20px;
-            width: 50%;
+            width: 80%;
         }
 
         .presentation_a{
@@ -137,13 +89,23 @@
 
     }
 
+    #projets_intro{
+        height: 600px;
+        background-image: url('./assets/background/desk.webp');
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        color: white;
+
+        border: solid black 1px;
+
+        font-size: 4em;
+        margin-bottom: 70px;
+    }
+
     #projets{
         height: auto;
-        background: linear-gradient(
-            to top,
-            rgba(0, 0, 0, 0),
-            whitesmoke
-        );
+        background-color: white;
         padding-bottom: 50px;
 
         .projets__container{
@@ -154,174 +116,93 @@
             
         }
 
-        .projet_div_logo{
-            width: 400px;
-            border: solid black 1px;
-
-            box-shadow: 3px 3px 1px darkgray;
-            
-        }
-
-        .projet__article{
-            margin-bottom: 50px;
-        }
-
-        .projet__title{
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-
-        .carousel{
-            margin: auto;
-            // width: 1400px;
-            width: 90dvw;
-            overflow: hidden;
-
-            border-left: solid black 1px;
-            border-right: solid black 1px;
-
-            margin-bottom: 20px;
-        }
-
-        .carousel-inner{
-            background-color: white;
-            filter: drop-shadow(2px 2px 2px black);
-
-        }
-
-        .carousel-item{
-            max-height: 800px;
-        }
-
-        .carousel__image{
-            height: 50dvw;
-        }
-
-        //Boutons du carousel
-        .carousel-control-prev{
-            margin: auto;
-        }
-
-        .carousel-control-prev:hover{
-            background: linear-gradient(
-                to left,
-                rgba(0, 0, 0, 0),
-                rgba(0, 0, 0, 0.20)
-            );
-        }
-
-        .carousel-control-next{
-            margin: auto;
-        }
-
-        .carousel-control-next:hover{
-            background: linear-gradient(
-                to right,
-                rgba(0, 0, 0, 0),
-                rgba(0, 0, 0, 0.20)
-            );
-        }
-
-        .projet__info{
-            max-width: 1000px;
-            margin: auto;
-
-            display: flex;
-            flex-direction: column;
-
-            text-align: left;
-        }
-
-        .projet__desc{
-            border-bottom: solid black 1px;
-            padding-bottom: 20px;
-        }
-
-        .projet__tags{
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-
-        .projet__tag{
-            background-color: black;
-            color: white;
-            border-radius: 20px;
-
-            display: block;
-            min-width: 120px;
-            padding: 0 10px;
-        }
-
-        .projet__tag:hover{
-            font-weight: 500;
-        }
-        
-        .projet__line{
-            max-width: 1000px;
-            margin: auto;
-            border-bottom: solid black 1px;
+        .nav-link{
+            color: black;
         }
     }
 
     #competences{
         display: flex;
         flex-direction: row;
-        background-color: whitesmoke;
+        background-color: #130E0A;
         padding-top: 0;
 
         .competences__img{
             width: 50%;
+            object-fit: cover;
+            object-position: 0 0;
         }
 
         .competences__right{
             width: 50%;
+            color: white;
 
-            .competences__h2{
-                
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            .competences_frontend{
+                width: 100%;
+            }
+
+            .competences__h3{
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            .competences__div__progress{
+                padding-top: 20px;
+                width: 100%;
+            }
+        
+            .progress{
+                max-width: 100%;
+                margin-bottom: 20px;
+                border-radius: 0 0 0 0;
+                box-shadow: inset 0px 1px 1px lightgray;
+
+                height: 40px;
+            }
+        
+            .progress-bar{
+                text-align: right;
+                padding-right: 10px;
+            }
+        
+            .bg-html{
+                background-color: #FC490B;
+            }
+        
+            .bg-css{
+                background-color: #264DE4;
+            }
+        
+            .bg-js{
+                background-color: #F7E018;
+            }
+        
+            .bg-react{
+                background-color: #58C4DC;
+            }
+        
+            .bg-sass{
+                background-color: #CC6699;
+            }
+        
+            .comp_div{
+                text-align: left;
+                width: 30%;
+                padding-right: 20px;
+                // overflow: hidden;
             }
         }
 
-        .competences__div__progress{
-            padding-top: 20px;
-            width: 100%;
-        }
-
-        .progress{
-            max-width: 100%;
-            margin-bottom: 20px;
-            border-radius: 0 0 0 0;
-            box-shadow: inset 0px 1px 1px lightgray;
-
-            height: 40px;
-        }
-
-        .progress-bar{
-            text-align: right;
-            padding-right: 10px;
-        }
-
-        .bg-html{
-            background-color: #FC490B;
-        }
-
-        .bg-css{
-            background-color: #264DE4;
-        }
-
-        .bg-js{
-            background-color: #F7E018;
-        }
-
-        .bg-react{
-            background-color: #58C4DC;
-        }
+        
     } 
 
     #contact{
         // height: auto;
+        // padding-top: 40px;
 
         background: linear-gradient(
             to top,
@@ -377,7 +258,7 @@
             }
 
             .submit{
-                background-color: black;
+                background-color: #130E0A;
                 color: white;
                 border: none;
             }            
@@ -392,7 +273,7 @@
 
 .footer{
     height: 200px;
-    background-color: black;
+    background-color: #130E0A;
     color: white;
 
     display: flex;
@@ -414,24 +295,6 @@
 }
 
 @media (max-width: 1200px) {
-    .header{
-        justify-content: space-evenly;
-
-        .header__nav{
-            width: 100%;
-
-            .header__nav__ul{
-                padding: 0 10px;
-                margin-right: 0;
-                text-align: center;
-            }
-        }
-
-        .header__nav__li{
-            width: 20%;
-        }
-    }
-
     .accueil_bg{
         
         width: 100% !important;
@@ -461,16 +324,40 @@
             url("./assets/background/paint.webp"), ;
     }
 
+    .comp_div{
+        background-color: rgba(0,0,0,0.30);
+        border-radius: 10px;
+        padding-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .comp_div:hover{
+        filter: drop-shadow(2px 2px 2px black);
+    }
+
+    .form__form{
+        width: 80% !important;
+    }
+
 }
 
 
 @media (max-width: 600px) {
-    .header__nav__ul{
-        flex-wrap: wrap;
-        justify-content: space-evenly;
 
-        .header__nav__li{
-            width: 33%;
-        }
+    section{
+        height: auto !important;
+    }
+
+    #competences{
+        height: auto !important;
+    }
+
+    .comp_div{
+        width: 45% !important;
+     
+    }
+
+    .competences_gestion{
+        width: 95% !important;
     }
 }
